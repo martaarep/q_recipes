@@ -1,0 +1,32 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  strong-mode:
+    implicit-casts: true
+    implicit-dynamic: true
+
+  errors:
+    parameter_assignments: error
+    dead_code: error
+    close_sinks: error
+
+  exclude:
+    - "**/*.g.dart"
+    - "**/swipe_stack.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "**/generated/*"
+    - "**/generated_plugin_registrant.dart"
+
+linter:
+  rules:
+    sort_pub_dependencies: false
+    sort_unnamed_constructors_first: false
+    curly_braces_in_flow_control_structures: false
+    library_prefixes: false
+    avoid_classes_with_only_static_members: false
+    use_named_constants: false
+    use_build_context_synchronously: false
+    deprecated_member_use: false
+    require_trailing_commas: false
+    always_use_package_imports: false

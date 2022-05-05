@@ -1,0 +1,5 @@
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main/main_staging.dart
+ASSET_PREFIX=staging
+BUNDLE_NAME=Flutter TDD Staging

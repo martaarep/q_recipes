@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Q Flutter TDD Dev",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main/main_dev.dart",
+      "args": [
+        "--flavor",
+        "dev"
+      ]
+    },
+    {
+      "name": "Q Flutter TDD Staging",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main/main_staging.dart",
+      "args": [
+        "--flavor",
+        "staging"
+      ]
+    },
+    {
+      "name": "Q Flutter TDD Prod",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main/main_prod.dart",
+      "args": [
+        "--flavor",
+        "prod"
+      ]
+    },
+  ]
+}
