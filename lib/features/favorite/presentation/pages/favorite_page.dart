@@ -24,7 +24,6 @@ class _FavoritesList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(initializationFavoriteListProvider);
     final recipes = ref.watch(filteredFavoritesListProvider);
     return SliverToBoxAdapter(
       child: Column(

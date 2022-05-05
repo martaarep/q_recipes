@@ -8,7 +8,9 @@ class VeganRecipesNotifier extends StateNotifier<VeganRecipesState> {
   final RecipeRepository _recipeRepository;
 
   VeganRecipesNotifier(this._recipeRepository)
-      : super(const VeganRecipesState.initial());
+      : super(const VeganRecipesState.initial()) {
+    loadVeganRecipes();
+  }
 
   Future<void> loadVeganRecipes() async {
     state = const VeganRecipesState.loading();

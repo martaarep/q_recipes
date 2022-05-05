@@ -46,15 +46,6 @@ final veganRecipesNotifierProvider =
   return VeganRecipesNotifier(ref.watch(recipesRepositoryProvider));
 });
 
-final initializationRecipesProviders =
-    FutureProvider.autoDispose<Unit>((ref) async {
-  final recipesNotifier = ref.watch(flexiRecipesNotifierProvider.notifier);
-  final veganRecipesNotifier = ref.watch(veganRecipesNotifierProvider.notifier);
-  await veganRecipesNotifier.loadVeganRecipes();
-  await recipesNotifier.loadRecipes();
-  return unit;
-});
-
 //Firebase
 final firebaseFirestoreProvider =
     Provider<FirebaseFirestore>((ref) => FirebaseFirestore.instance);
@@ -74,16 +65,6 @@ final favoriteNotifierProvider =
   (ref) => FavoriteNotifier(
     ref.watch(favoriteRepositoryProvider),
   ),
-);
-
-final initializationFavoriteListProvider = FutureProvider.autoDispose<Unit>(
-  (ref) async {
-    final favoriteListNotifier =
-        ref.watch(favoriteListNotifierProvider.notifier);
-    await favoriteListNotifier.getFavorites();
-
-    return unit;
-  },
 );
 
 //za filtriranje favorite-a (ALL,VEGAN)

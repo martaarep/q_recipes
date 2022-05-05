@@ -23,8 +23,6 @@ class _FlexiterianRecipesBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(initializationRecipesProviders);
-    ref.watch(initializationFavoriteListProvider);
     ref.favoriteStateListener(context);
     return RefreshIndicator(
       color: AppColors.lightestGreen,

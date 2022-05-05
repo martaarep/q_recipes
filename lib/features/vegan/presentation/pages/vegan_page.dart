@@ -24,7 +24,6 @@ class _VeganRecipesBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(initializationRecipesProviders);
     ref.favoriteStateListener(context);
     return RefreshIndicator(
       color: AppColors.lightestGreen,
